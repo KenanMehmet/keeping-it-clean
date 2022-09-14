@@ -1,0 +1,17 @@
+
+.navbar-blue {
+    background-color: aquamarine;
+}
+
+.bg-green {
+    background-color: green;
+}
+
+.fixed-top-2 {
+    margin-top: 56px;
+    z-index: 1029;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+}
