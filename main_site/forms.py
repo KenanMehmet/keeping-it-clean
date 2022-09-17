@@ -1,9 +1,12 @@
 from django import forms
+from django.contrib.auth import password_validation
 from .models import Client
 
 class MainSiteClientSignupForm(forms.ModelForm):
 
-    class meta():
+    password_conf = forms.CharField(max_length=24)
+
+    class Meta:
         model = Client
         fields = [
             'forename',
