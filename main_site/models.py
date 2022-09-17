@@ -14,6 +14,7 @@ class Client(models.Model):
     phone_number = models.CharField(max_length=16)
     email = models.EmailField(max_length=256, null=True, blank=True)
     password = models.CharField(max_length=256, null=True, blank=True)
+    verification = models.BooleanField(default=False)
 
 class Policies(models.Model):
     "Actions people can take to help their carbon footprint"
