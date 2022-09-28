@@ -12,6 +12,9 @@ class Client(models.Model):
     created_on = models.DateTimeField(default=timezone.now)
     gender = models.CharField(max_length=10, choices=GENDER_CHOICES)
     phone_number = models.CharField(max_length=16)
+    email = models.EmailField(max_length=256, null=True, blank=True)
+    password = models.CharField(max_length=256, null=True, blank=True)
+    verification = models.BooleanField(default=False)
 
 class Policies(models.Model):
     "Actions people can take to help their carbon footprint"
