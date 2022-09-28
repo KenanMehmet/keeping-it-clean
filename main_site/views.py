@@ -32,7 +32,7 @@ class MainSiteClientSignup(TemplateView):
         )
 
     def post(self, request):
-        form = MainSiteClientSignupForm(request.POST or None)
+        form = MainSiteClientSignupForm(request.POST or None, request.FILES)
         if form.is_valid():
             form.save()
             print("done")
