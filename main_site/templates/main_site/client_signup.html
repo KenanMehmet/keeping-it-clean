@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<div class="main-body-container">
+    <form action="" method="post">
+        {% csrf_token %}
+        <div>
+            <h1 class="text-success">Sign up</h1>
+        </div>
+        {{form.errors}}
+        {% for field in form %}
+            <div>
+                {{field.label}}
+                {{field}}
+                {{field.errors}}
+            </div>
+        {% endfor %}
+        <button action="submit"> </button>
+    </form>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/places.js@1.17.0"></script>
+<script>
+</script>
+{% endblock %}
